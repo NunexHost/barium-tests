@@ -29,8 +29,8 @@ public abstract class ChunkMixin {
                 for (int z = minZ; z < maxZ; z++) {
                     int index = (x << 11) | (y << 7) | z;
                    // BlockState state = states[index];
+                }
             }
         }
     }
-
 }
