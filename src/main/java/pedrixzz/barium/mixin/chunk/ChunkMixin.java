@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 @Mixin(WorldChunk.class)
 public abstract class ChunkMixin {
 
-    @Inject(method = "ChunkMixin", at = @At("HEAD")
+    @Inject(method = "ChunkMixin", at = @At("HEAD"))
     private static void modifyTick(World world, Chunk chunk, BlockPos pos) {
         // Cache de variáveis usadas com frequência
       //  int[] states = chunk.getStates();
