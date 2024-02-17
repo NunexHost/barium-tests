@@ -1,5 +1,6 @@
 package pedrixzz.barium.mixin.chunk;
 
+import net.minecraft.world.chunk.WorldChunk;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -28,16 +29,6 @@ public abstract class ChunkMixin {
                 for (int z = minZ; z < maxZ; z++) {
                     int index = (x << 11) | (y << 7) | z;
                    // BlockState state = states[index];
-
-                    // Código de otimização específico para o bloco
-                    if (state.isSolid()) {
-                        // ...
-                    } else if (state.isLiquid()) {
-                        // ...
-                    } else {
-                        // ...
-                    }
-                }
             }
         }
     }
