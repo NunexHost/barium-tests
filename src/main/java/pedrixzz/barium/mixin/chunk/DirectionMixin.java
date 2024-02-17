@@ -1,6 +1,6 @@
 package pedrixzz.barium.mixin.chunk;
 
-import net.minecraft.core.Direction;
+import net.minecraft.util.math.Direction;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
