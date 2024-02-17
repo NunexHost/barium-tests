@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 public abstract class ChunkMixin {
 
     @Inject
-    private static void modifyTick(World world, Chunk chunk, BlockPos pos, Random rand) {
+    private static void modifyTick(World world, Chunk chunk, BlockPos pos) {
         // Cache de variáveis usadas com frequência
-        int[] states = chunk.getStates();
+      //  int[] states = chunk.getStates();
         int minX = pos.getX() - 8;
         int minY = pos.getY() - 8;
         int minZ = pos.getZ() - 8;
@@ -27,7 +27,7 @@ public abstract class ChunkMixin {
             for (int y = minY; y < maxY; y++) {
                 for (int z = minZ; z < maxZ; z++) {
                     int index = (x << 11) | (y << 7) | z;
-                    BlockState state = states[index];
+                   // BlockState state = states[index];
 
                     // Código de otimização específico para o bloco
                     if (state.isSolid()) {
