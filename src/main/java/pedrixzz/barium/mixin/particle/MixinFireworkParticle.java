@@ -1,4 +1,4 @@
-package me.flashyreese.mods.sodiumextra.mixin.particle;
+package pedrixzz.barium.mixin.particle;
 
 import net.minecraft.client.particle.FireworksSparkParticle;
 import net.minecraft.client.particle.Particle;
