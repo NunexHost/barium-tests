@@ -1,4 +1,4 @@
-package pedrixzz.barium.mixin.features.chunk;
+package pedrixzz.barium.mixin.chunk;
 
 import net.minecraft.client.world.ClientChunkManager;
 import net.minecraft.util.math.MathHelper;
