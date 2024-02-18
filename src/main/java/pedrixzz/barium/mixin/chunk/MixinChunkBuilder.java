@@ -1,4 +1,4 @@
-package me.jellysquid.mods.sodium.mixin.features.chunk_rendering;
+package pedrixzz.barium.mixin.chunk;
 
 import net.minecraft.client.render.chunk.ChunkBuilder;
 import org.spongepowered.asm.mixin.Mixin;
