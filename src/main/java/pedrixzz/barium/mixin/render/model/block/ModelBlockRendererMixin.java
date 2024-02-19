@@ -1,6 +1,7 @@
 package pedrixzz.barium.mixin.render;
 
 import net.minecraft.client.model.Model;
+import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.util.math.Box;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -14,7 +15,6 @@ public abstract class ModelBlockRendererMixin {
   /**
    * Otimiza o método `renderModel` para evitar a recálculo do tamanho da lista `boxes` a cada iteração do loop.
    */
-  @Overwrite
   public void renderModel(Model model, float partialTicks) {
 
     int size = boxes.size();
