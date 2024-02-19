@@ -6,8 +6,7 @@
   "mixins": [
     "particle.MixinParticleManager",
     "particle.MixinFireworkParticle",
-    "render.ClientWorldMixin",
-    "render.EntityRendersMixin"
+    "render.ClientWorldMixin"
   ],
   "client": [
   ],
