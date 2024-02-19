@@ -10,7 +10,7 @@ import net.minecraft.client.particle.ParticleManager;
 import net.fabricmc.fabric.impl.client.particle.ParticleFactoryRegistryImpl;
 
 @Mixin(ParticleManager.class)
-public abstract class ParticleManagerMixin {
+public abstract class MixinParticleManager {
 	@Inject(method = "registerDefaultFactories()V", at = @At("RETURN"))
 	private void onRegisterDefaultFactories(CallbackInfo info) {
 		ParticleFactoryRegistryImpl.INSTANCE.initialize((ParticleManager) (Object) this);
