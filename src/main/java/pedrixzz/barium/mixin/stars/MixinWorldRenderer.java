@@ -8,8 +8,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(WorldRenderer.class)
 public class MixinWorldRenderer {
-
-
     @Redirect(
             method = "renderSky(Lnet/minecraft/client/util/math/MatrixStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/render/Camera;ZLjava/lang/Runnable;)V",
             at = @At(
@@ -22,5 +20,4 @@ public class MixinWorldRenderer {
         } else {
             return 0.0f;
         }
-    }
 }
