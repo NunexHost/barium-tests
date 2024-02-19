@@ -1,4 +1,4 @@
-package net.fabricmc.fabric.mixin.client.rendering;
+package pedrixzz.barium.mixin.render;
 
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -75,11 +75,4 @@ public abstract class EntityRenderersMixin {
                                                                                                                                                                                                                                     interface LivingEntityRendererAccessor {
                                                                                                                                                                                                                                         void callAddFeature(LivingEntityFeatureRenderer.FeatureRenderer<? extends LivingEntity> feature);
                                                                                                                                                                                                                                         }
-                                                                                                                                                                                                                                        
-on
-
-on
-
-
-on
-                                                                                             
+                                                                                                                                                 
