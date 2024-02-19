@@ -17,6 +17,5 @@ public class MixinWorldRenderer {
     )
     public float redirectGetStarBrightness(ClientWorld instance, float f) {
         return instance.method_23787(f);
-        return 0.0f;
         }
 }
