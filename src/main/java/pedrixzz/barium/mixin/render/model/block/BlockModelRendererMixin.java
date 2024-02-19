@@ -6,8 +6,8 @@ import net.minecraft.util.math.Box;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(ModelBlockRenderer.class)
-public abstract class ModelBlockRendererMixin {
+@Mixin(BlockModelRenderer.class)
+public abstract class BlockBlockRendererMixin {
 
 //  @Shadow
  // private List<Box> boxes;
