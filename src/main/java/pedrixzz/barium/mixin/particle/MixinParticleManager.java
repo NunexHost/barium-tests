@@ -22,6 +22,6 @@ public abstract class MixinParticleManager {
 	@Inject(method = "addParticle", at = @At("HEAD"))
 	private void onAddParticle(net.minecraft.client.particle.Particle particle, CallbackInfo info) {
 		// Otimização: evitar a chamada virtual `ParticleManager.getParticleFactory`
-		particleFactoryRegistry.getParticleFactory(particle.getType()).add(particle, (ParticleManager) (Object) this);
+		ParticleFactoryRegistryImpl.INSTANCE.initialize((ParticleManager) (Object) this);
 	}
 }
