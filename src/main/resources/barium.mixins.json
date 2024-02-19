@@ -6,7 +6,7 @@
   "mixins": [
     "particle.MixinParticleManager",
     "particle.MixinFireworkParticle",
-    "render.ClientWorldMixin"
+    "stars.MixinWorldRenderer"
   ],
   "client": [
   ],
