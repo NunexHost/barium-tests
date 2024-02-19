@@ -20,7 +20,7 @@ public abstract class BlockBoxMixin {
     private final int area;
 
     @Inject
-    public OptimizedBlockBoxMixin(BlockBox instance) {
+    public BlockBoxMixin(BlockBox instance) {
         this.volume = calculateVolume(instance);
         this.area = calculateArea(instance);
     }
