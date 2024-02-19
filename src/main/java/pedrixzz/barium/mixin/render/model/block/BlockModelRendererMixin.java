@@ -2,12 +2,13 @@ package pedrixzz.barium.mixin.render;
 
 import net.minecraft.client.model.Model;
 import net.minecraft.client.render.block.BlockModelRenderer;
+import net.minecraft.util.math.Boxes
 import net.minecraft.util.math.Box;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(BlockModelRenderer.class)
-public abstract class BlockBlockRendererMixin {
+public abstract class BlockModelRendererMixin {
 
 //  @Shadow
  // private List<Box> boxes;
