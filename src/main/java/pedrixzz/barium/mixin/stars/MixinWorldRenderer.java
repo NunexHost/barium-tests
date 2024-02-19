@@ -1,4 +1,4 @@
-package me.flashyreese.mods.sodiumextra.mixin.stars;
+package pedrixzz.barium.mixin.stars;
 
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.world.ClientWorld;
@@ -18,6 +18,9 @@ public class MixinWorldRenderer {
             )
     )
     public float redirectGetStarBrightness(ClientWorld instance, float f) {
-        return instance.method_23787(f) : 0.0f;
+        return instance.method_23787(f);
+        } else {
+            return 0.0f;
+        }
     }
 }
