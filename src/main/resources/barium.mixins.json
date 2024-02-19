@@ -5,9 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "particle.MixinParticleManager",
-    "particle.MixinFireworkParticle",
-    "chunk.MixinChunkBuilder",
-    "chunk.MixinClientChunkMap"
+    "particle.MixinFireworkParticle"
   ],
   "client": [
   ],
