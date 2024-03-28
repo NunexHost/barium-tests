@@ -1,6 +1,7 @@
 package pedrixzz.barium.mixin.chunk;
 
 import java.util.Arrays;
+import net.minecraft.world.World
 
 class OptimizedChunk {
 
