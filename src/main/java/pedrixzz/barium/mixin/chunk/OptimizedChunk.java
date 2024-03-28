@@ -1,6 +1,7 @@
 package pedrixzz.barium.mixin.chunk;
 
 import java.util.Arrays;
+import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World;
 
 class OptimizedChunk {
@@ -20,7 +21,7 @@ class OptimizedChunk {
         this.z = z;
         this.sections = Arrays.stream(sections)
             .map(row -> Arrays.stream(row)
-                .map(col -> Arrays.fill(new int[256], 0))
+             //   .map(col -> Arrays.fill(new int[256], 0))
                 .toArray(int[][][]::new)
             )
             .toArray(int[][][]::new);
