@@ -51,7 +51,7 @@ class OptimizedChunk {
         this.status = "loaded";
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                this.setBiome(x, z, world.getBiome(x + this.x * 16, z + this.z * 16));
+       //         this.setBiome(x, z, world.getBiome(x + this.x * 16, z + this.z * 16));
             }
         }
     }
