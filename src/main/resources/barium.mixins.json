@@ -4,8 +4,7 @@
   "package": "pedrixzz.barium.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "particle.MixinParticleManager",
-    "chunk.OptimizedChunk"
+    "PlayerListMixin"
   ],
   "client": [
   ],
