@@ -21,7 +21,4 @@ public abstract class PlayerListMixin {
    target = "Lnet/minecraft/client/MinecraftClient;isInSingleplayer()Z"
 )
    )
-   private boolean renderHeads (Lnet/net/minecraft/client/MinecraftClient; instance) {
-      return true;
-   }
 }
