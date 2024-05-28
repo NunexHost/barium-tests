@@ -1,30 +1,44 @@
 package pedrixzz.barium.client;
 
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ItemStack;
+import fabricmc.api.event.EventPriority;
+import fabricmc.api.event.lifecycle.EquipEvent;
+import fabricmc.api.item.Wearable;
+import fabricmc.api.player.v1.Player;
+import fabricmc.fabric.api.event.player.PlayerEvents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtList;
+import net.minecraft.nbt.NbtString;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.effect.InstantEffectTypes;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.item.ItemStack;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class BotaLendaria extends ArmorItem {
+@Mod("Barium")
+public class BotaLendaria {
 
-    public BotaLendaria(ArmorMaterial material, EntityEquipmentSlot[] slot, Settings settings) {
-        super(material, slot[0], settings);
+    private static final Logger LOGGER = LogManager.getLogger(AetherArmorCondition.class);
+
+    @Mod.EventBus
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public static void onArmorEquip(EquipEvent.Feet event) {
+        Player player = event.getEntity();
+        ItemStack newStack = event.getNewStack();
+
+        if (newStack.getItem() instanceof Wearable wearable && isLegendaryDiamondBoots(newStack)) {
+            applySpeedEffect(player);
+        }
     }
 
-    @Override
-    public void onEquipEvent(ArmorEquipEvent event) {
-        PlayerEntity player = event.getEntity();
-        ItemStack stack = event.getItemStack();
+    private static boolean isLegendaryDiamondBoots(ItemStack stack) {
+        // Case-insensitive name check for "Bota Lendária"
+        String itemName = stack.getName().getString().toLowerCase();
+        return itemName.contains("Bota Lendária") && stack.getItem().getRegistryHolder().getId().getPath().startsWith("minecraft:diamond_boots");
+    }
 
-        // Check if the equipped item is the Legendary Boot
-        if (stack.getItem().equals(this) && stack.getName().getString().equals("Legendary Boot")) {
-            // Apply speed effect when equipped
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200, 1)); // Adjust duration and amplifier as needed
-        } else {
-            // Remove speed effect if another boot is equipped
-            player.removeStatusEffect(StatusEffects.SPEED);
-        }
+    private static void applySpeedEffect(Player player) {
+        player.addEffect(new MobEffectInstance(InstantEffectTypes.SPEED, 20 * 3, 3)); // Speed 4 for 3 seconds
     }
 }
