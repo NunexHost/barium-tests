@@ -8,7 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.registry;
+import net.minecraft.registry.Registry;
 
 public class BotaLendaria implements ModInitializer {
 
